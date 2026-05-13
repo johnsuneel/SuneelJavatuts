@@ -7,11 +7,11 @@ public class Main {
 //        ol.m2(10);
 //        ol.m3(10L);
 
-    Constructor ctr1=new Constructor();
-      Constructor ctr2=new Constructor(10);
+// Parent.Child c =new Parent.Child();
 
-           // Parent.Child c =new Parent.Child();
-
+        SubServiceProvider sp=new SubServiceProvider();
+sp.m2();
+sp.m1();
 
     }
 }
