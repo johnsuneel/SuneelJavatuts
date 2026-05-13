@@ -1,21 +1,22 @@
 package Basics.Oops;
 
+
 public class Parent {
-    public Parent() {
-        System.out.println(" parent no-arg");
+    public void display() {
+        System.out.println("parent display method");
     }
 
-
     public static class Child extends Parent {
-        public Child() {
-            //super();
-            System.out.println("Child no-arg");
+       // @Override
+        public void display() {
+            super.display();
+            System.out.println("Child display method");
         }
     }
 
-//    public static void main(String[] args) {
-//        Child child=new Child();
-//    }
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.display();
+    }
 }
-
 
