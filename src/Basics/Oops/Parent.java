@@ -7,7 +7,6 @@ public class Parent {
     }
 
     public static class Child extends Parent {
-       // @Override
         public void display() {
             super.display();
             System.out.println("Child display method");
