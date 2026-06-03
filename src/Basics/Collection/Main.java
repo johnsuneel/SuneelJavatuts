@@ -1,10 +1,9 @@
 package Basics.Collection;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static <Student> void main(String[] args) {
         int a=20;
         int b=30;
         if (a==b){
@@ -14,25 +13,28 @@ public class Main {
             System.out.println("numbers are not equal");
         }
 
-        Person p1=new Person(28,5.7);
-        Person p2=new Person(28,5.8);
-        if(p1==p2){
-            System.out.println("p1 and p2 are equal");
-        }
-        else{
-            System.out.println("p1 and p2 are not equal");
-        }
+        Person visitor1 = new Person(25, 5.8);
+        Person visitor2= new Person(22, 5.10);
 
-
-
-        List<Person> list = new ArrayList<>();
-        list.add(new Person(25, 5.8));
-        Person visitor = new Person(25, 5.8);
-
-        if (list.contains(visitor)) {
+        if (visitor1.equals(visitor2)) {
             System.out.println("Match Found");
         } else {
             System.out.println("No match found.");
         }
+
+        Set <Person> profile= new HashSet<>();
+        profile.add(visitor1);
+        profile.add(visitor2);
+        System.out.println("Set profile size:"+profile.size());
+
+        Map<Person,Integer> Bio= new HashMap<>();
+        Bio.put(visitor1,24);
+        Bio.put(visitor2,26);
+        System.out.println("Map Bio size:"+Bio.size());
+
+
+
     }
 }
+
+

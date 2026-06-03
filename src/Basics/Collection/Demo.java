@@ -13,22 +13,21 @@ class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "age=" + age +
-                ", height=" + height +
-                '}';
+        return "Person{" + "age=" + age + ", height=" + height + '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return age == person.age && Double.compare(height, person.height) == 0;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Person person = (Person) o;
+//        return age == person.age && Double.compare(height, person.height) == 0;
+        return this.age==((Person)o).age;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(age, height);
+        //return Objects.hash(age, height);
+        return this.age;
     }
 }
 
